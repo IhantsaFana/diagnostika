@@ -2,9 +2,7 @@ import type { ResultatDiagnostic } from '../types'
 import { 
   FaCheckCircle, 
   FaExclamationTriangle, 
-  FaTimesCircle,
-  FaMoneyBillWave,
-  FaRobot
+  FaTimesCircle
 } from 'react-icons/fa'
 import { IoSparkles } from 'react-icons/io5'
 
@@ -13,6 +11,18 @@ interface ResultatDiagnosticProps {
 }
 
 export default function ResultatDiagnosticComponent({ resultat }: ResultatDiagnosticProps) {
+  // Fonction pour formater le coût (ex: "12 000Ar - 25 000Ar" => "12K - 25K MGA")
+  const formatCout = (cout: string) => {
+    // Extraire les nombres et convertir en K
+    const matches = cout.match(/(\d+)\s*(\d+)?/g)
+    if (matches && matches.length >= 2) {
+      const min = parseInt(matches[0].replace(/\s/g, ''))
+      const max = parseInt(matches[1].replace(/\s/g, ''))
+      return `${min / 1000}K - ${max / 1000}K MGA`
+    }
+    return cout
+  }
+
   const getGraviteConfig = (gravite: string) => {
     switch (gravite.toLowerCase()) {
       case 'léger': 
@@ -60,72 +70,73 @@ export default function ResultatDiagnosticComponent({ resultat }: ResultatDiagno
   return (
     <div className="space-y-8 animate-fadeIn">
       {/* Diagnostic Principal */}
-      <div className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${config.gradient} p-8 text-white shadow-2xl`}>
-        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-black/10 rounded-full -ml-24 -mb-24 blur-2xl"></div>
+      <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+        {/* Vidéo en arrière-plan */}
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover rounded-3xl"
+        >
+          <source src="/voiture.mp4" type="video/mp4" />
+        </video>
         
-        <div className="relative flex items-start gap-6">
-          <div className={`flex-shrink-0 ${config.iconBg} p-4 rounded-2xl shadow-lg backdrop-blur-sm`}>
-            {config.icon}
-          </div>
-          
-          <div className="flex-1">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="px-4 py-1.5 bg-white/20 backdrop-blur-md rounded-full text-sm font-semibold border border-white/30 shadow-lg">
-                {resultat.gravite}
-              </span>
-              {resultat.confiance && (
-                <span className="px-4 py-1.5 bg-white/20 backdrop-blur-md rounded-full text-sm font-semibold border border-white/30 shadow-lg">
-                  {resultat.confiance}
+        {/* Overlay gradient blanc transparent pour la lisibilité (bas vers haut, 0 to 50%) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-white/50 to-transparent"></div>
+        
+        {/* Contenu */}
+        <div className="relative p-8">
+          <div className="flex items-start justify-between gap-6 h-full">
+            {/* Informations principales - Gauche */}
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-3">
+                <span className={`px-4 py-1.5 ${config.bgColor} ${config.textColor} backdrop-blur-md rounded-full text-sm font-semibold ${config.borderColor} border-2 shadow-lg`}>
+                  {resultat.gravite}
                 </span>
-              )}
+                {resultat.confiance && (
+                  <span className={`px-4 py-1.5 ${config.bgColor} ${config.textColor} backdrop-blur-md rounded-full text-sm font-semibold ${config.borderColor} border-2 shadow-lg`}>
+                    {resultat.confiance}
+                  </span>
+                )}
+              </div>
+              
+              <h2 className="text-4xl font-bold mb-2 drop-shadow-lg text-gray-900">
+                {resultat.diagnostic}
+              </h2>
+              
+              <p className="text-gray-900 text-lg font-medium mb-4">
+                Diagnostic établi avec {resultat.score ? `${Math.round(resultat.score * 100)}%` : 'haute'} précision
+              </p>
             </div>
-            
-            <h2 className="text-4xl font-bold mb-2 drop-shadow-lg">
-              {resultat.diagnostic}
-            </h2>
-            
-            <p className="text-white/90 text-lg">
-              Diagnostic établi avec {resultat.score ? `${Math.round(resultat.score * 100)}%` : 'haute'} précision
-            </p>
-          </div>
-        </div>
-      </div>
 
-      {/* Coût Estimatif */}
-      <div className="bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 rounded-2xl p-8 border-2 border-green-200 shadow-xl hover:shadow-2xl transition-shadow">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <div className="bg-gradient-to-br from-green-400 to-emerald-500 p-4 rounded-2xl shadow-lg">
-              <FaMoneyBillWave className="text-white" size={28} />
-            </div>
-            <div>
-              <p className="text-gray-600 text-sm font-medium mb-1">Coût estimatif de la réparation</p>
-              <p className="text-4xl font-bold text-green-700">
-                {resultat.cout_estimatif}
+            {/* Coût en bas à droite, aligné parallèlement */}
+            <div className="flex flex-col justify-end pt-16">
+              <p className="text-gray-800 text-sm font-medium mb-1 text-right">Coût estimatif</p>
+              <p className="text-2xl font-bold text-gray-900 text-right">
+                {formatCout(resultat.cout_estimatif)}
               </p>
             </div>
           </div>
-          <div className="hidden sm:block text-6xl opacity-10">💰</div>
         </div>
       </div>
 
       {/* Explication */}
-      <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-purple-50 rounded-2xl p-8 border-2 border-purple-200 shadow-xl">
+      <div className="rounded-2xl p-8 bg-slate-50 border border-slate-200">
         <div className="flex items-start gap-4 mb-4">
-          <div className="flex-shrink-0 bg-gradient-to-br from-purple-400 to-pink-500 p-3 rounded-xl shadow-lg">
-            <FaRobot className="text-white" size={24} />
+          <div className="flex-shrink-0">
+            <img src="/diagnostika.svg" alt="Diagnostika" className="w-10 h-10" />
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">
-              <h3 className="text-xl font-bold text-purple-900">
+              <h3 className="text-xl font-bold text-slate-900">
                 {resultat.explication_ia ? 'Explication IA' : 'Explication'}
               </h3>
               {resultat.explication_ia && (
-                <IoSparkles className="text-purple-500 animate-pulse" size={20} />
+                <IoSparkles className="text-blue-500 animate-pulse" size={20} />
               )}
             </div>
-            <p className="text-purple-800 leading-relaxed text-lg">
+            <p className="text-slate-700 leading-relaxed text-lg">
               {explication}
             </p>
           </div>
@@ -133,9 +144,12 @@ export default function ResultatDiagnosticComponent({ resultat }: ResultatDiagno
 
         {/* Conseils si disponibles */}
         {resultat.conseils && (
-          <div className="mt-6 pt-6 border-t-2 border-purple-200">
-            <p className="text-purple-700 font-medium mb-2">💡 Conseil :</p>
-            <p className="text-purple-800 leading-relaxed">
+          <div className="mt-6 pt-6 border-t border-slate-300">
+            <p className="text-slate-900 font-semibold mb-2 flex items-center gap-2">
+              <span>💡</span>
+              <span>Conseil</span>
+            </p>
+            <p className="text-slate-700 leading-relaxed">
               {resultat.conseils}
             </p>
           </div>

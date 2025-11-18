@@ -40,10 +40,10 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
         {/* Bouton fermer externe */}
         <button
           onClick={onClose}
-          className="absolute -top-4 -right-4 z-20 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-full p-3 shadow-2xl transition-all hover:scale-110 border-2 border-slate-600"
+          className="absolute -top-3 -right-3 z-20 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-full p-2 shadow-2xl transition-all hover:scale-110 border-2 border-slate-600"
           aria-label="Fermer"
         >
-          <IoClose size={24} />
+          <IoClose size={20} />
         </button>
 
         {/* Modal Content */}
