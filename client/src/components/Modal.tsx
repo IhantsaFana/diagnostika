@@ -31,7 +31,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Overlay */}
       <div 
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-fadeIn"
+        className="absolute inset-0 bg-black/80 backdrop-blur-md animate-fadeIn"
         onClick={onClose}
       />
       
@@ -40,15 +40,15 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
         {/* Bouton fermer externe */}
         <button
           onClick={onClose}
-          className="absolute -top-4 -right-4 z-20 bg-white hover:bg-gray-100 text-gray-700 hover:text-gray-900 rounded-full p-3 shadow-2xl transition-all hover:scale-110 border-2 border-gray-200"
+          className="absolute -top-4 -right-4 z-20 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-full p-3 shadow-2xl transition-all hover:scale-110 border-2 border-slate-600"
           aria-label="Fermer"
         >
           <IoClose size={24} />
         </button>
 
         {/* Modal Content */}
-        <div className="bg-white rounded-2xl shadow-2xl w-full max-h-[95vh] overflow-hidden animate-scaleIn">
-          <div className="overflow-y-auto max-h-[95vh] p-8">
+        <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl shadow-2xl w-full max-h-[95vh] overflow-hidden animate-scaleIn border border-slate-700">
+          <div className="overflow-y-auto max-h-[95vh] p-8 modal-scrollbar">
             {children}
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import type { Symptome } from '../types'
+import { FaSearch } from 'react-icons/fa'
 
 interface SearchBarProps {
   onSearch: (texte: string) => void
@@ -27,11 +28,13 @@ export default function SearchBar({
       clearTimeout(debounceTimer.current)
     }
 
-    if (texte.trim().length >= 3) {
+    const texteClean = texte.trim()
+    
+    if (texteClean.length >= 3) {
       debounceTimer.current = window.setTimeout(() => {
-        onSearch(texte)
+        onSearch(texteClean)
         setShowResults(true)
-      }, 300) // Attendre 300ms après la dernière frappe
+      }, 800)
     } else {
       setShowResults(false)
     }
@@ -39,9 +42,11 @@ export default function SearchBar({
     return () => {
       if (debounceTimer.current !== null) {
         clearTimeout(debounceTimer.current)
+        debounceTimer.current = null
       }
     }
-  }, [texte, onSearch])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [texte])
 
   // Fermer les résultats si clic à l'extérieur
   useEffect(() => {
@@ -81,10 +86,8 @@ export default function SearchBar({
         <div className="absolute right-3 top-1/2 -translate-y-1/2">
           {isLoading ? (
             <div className="animate-spin rounded-full h-5 w-5 border-2 border-blue-500 border-t-transparent"></div>
-          ) : texte.length >= 3 ? (
-            <span className="text-blue-600">🔍</span>
           ) : (
-            <span className="text-gray-400">✏️</span>
+            <FaSearch className={texte.length >= 3 ? "text-blue-600" : "text-gray-400"} size={16} />
           )}
         </div>
       </div>
@@ -153,7 +156,7 @@ export default function SearchBar({
               <button
                 key={symptome.id}
                 onClick={() => handleSuggestionClick(symptome)}
-                className="px-3 py-2 bg-gradient-to-r from-blue-50 to-purple-50 hover:from-blue-100 hover:to-purple-100 border border-blue-200 rounded-lg text-sm text-gray-700 hover:text-gray-900 transition-all hover:shadow-md hover:scale-105"
+                className="px-3 py-2 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-lg text-sm text-gray-700 hover:text-gray-900 transition-all hover:shadow-md"
               >
                 {symptome.nom}
               </button>
@@ -162,10 +165,7 @@ export default function SearchBar({
         </div>
       )}
 
-      {/* Aide */}
-      <p className="text-xs text-gray-500 mt-3">
-        💡 Tapez au moins 3 caractères pour rechercher automatiquement
-      </p>
+
     </div>
   )
 }
