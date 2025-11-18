@@ -1,0 +1,352 @@
+[
+  {
+    "id": "fumee_noire",
+    "nom": "Fumée noire à l'échappement",
+    "description": "Émission de fumée noire par le pot d'échappement",
+    "categorie": "Échappement",
+    "poids": 0.9
+  },
+  {
+    "id": "fumee_blanche",
+    "nom": "Fumée blanche à l'échappement",
+    "description": "Émission de fumée blanche épaisse",
+    "categorie": "Échappement",
+    "poids": 0.9
+  },
+  {
+    "id": "fumee_bleue",
+    "nom": "Fumée bleue à l'échappement",
+    "description": "Émission de fumée bleue",
+    "categorie": "Échappement",
+    "poids": 0.9
+  },
+  {
+    "id": "consommation_elevee",
+    "nom": "Consommation de carburant élevée",
+    "description": "Augmentation anormale de la consommation",
+    "categorie": "Carburant",
+    "poids": 0.7
+  },
+  {
+    "id": "moteur_chauffe",
+    "nom": "Moteur qui chauffe",
+    "description": "Température moteur anormalement élevée",
+    "categorie": "Refroidissement",
+    "poids": 1.0
+  },
+  {
+    "id": "fuite_liquide",
+    "nom": "Fuite de liquide sous le véhicule",
+    "description": "Présence de liquide au sol",
+    "categorie": "Fuites",
+    "poids": 0.8
+  },
+  {
+    "id": "demarrage_difficile",
+    "nom": "Démarrage difficile",
+    "description": "Le moteur peine à démarrer",
+    "categorie": "Démarrage",
+    "poids": 0.8
+  },
+  {
+    "id": "batterie_faible",
+    "nom": "Batterie faible",
+    "description": "Voyant batterie allumé ou démarrage lent",
+    "categorie": "Électrique",
+    "poids": 0.7
+  },
+  {
+    "id": "bruit_claquement",
+    "nom": "Bruit de claquement au démarrage",
+    "description": "Claquement métallique lors du démarrage",
+    "categorie": "Bruit",
+    "poids": 0.8
+  },
+  {
+    "id": "vibrations_moteur",
+    "nom": "Vibrations anormales du moteur",
+    "description": "Moteur qui vibre de façon inhabituelle",
+    "categorie": "Vibrations",
+    "poids": 0.6
+  },
+  {
+    "id": "perte_puissance",
+    "nom": "Perte de puissance",
+    "description": "Le véhicule manque de puissance",
+    "categorie": "Performance",
+    "poids": 0.8
+  },
+  {
+    "id": "voyant_moteur",
+    "nom": "Voyant moteur allumé",
+    "description": "Témoin de défaut moteur sur le tableau de bord",
+    "categorie": "Voyants",
+    "poids": 0.7
+  },
+  {
+    "id": "bruit_anormal",
+    "nom": "Bruit anormal du moteur",
+    "description": "Bruit inhabituel provenant du moteur",
+    "categorie": "Bruit",
+    "poids": 0.6
+  },
+  {
+    "id": "odeur_brulee",
+    "nom": "Odeur de brûlé",
+    "description": "Odeur de brûlé dans l'habitacle ou à l'extérieur",
+    "categorie": "Odeur",
+    "poids": 0.9
+  },
+  {
+    "id": "calage_moteur",
+    "nom": "Moteur qui cale",
+    "description": "Le moteur s'arrête de façon inattendue",
+    "categorie": "Fonctionnement",
+    "poids": 0.9
+  },
+  {
+    "id": "ralenti_irregulier",
+    "nom": "Ralenti irrégulier",
+    "description": "Le moteur tourne de façon instable au ralenti",
+    "categorie": "Fonctionnement",
+    "poids": 0.6
+  },
+  {
+    "id": "acceleration_lente",
+    "nom": "Accélération lente",
+    "description": "Le véhicule accélère difficilement",
+    "categorie": "Performance",
+    "poids": 0.7
+  },
+  {
+    "id": "bruit_sifflement",
+    "nom": "Sifflement du moteur",
+    "description": "Bruit de sifflement aigu",
+    "categorie": "Bruit",
+    "poids": 0.7
+  },
+  {
+    "id": "voyant_huile",
+    "nom": "Voyant d'huile allumé",
+    "description": "Témoin de pression d'huile",
+    "categorie": "Voyants",
+    "poids": 1.0
+  },
+  {
+    "id": "fuite_huile",
+    "nom": "Fuite d'huile moteur",
+    "description": "Présence d'huile sous le véhicule",
+    "categorie": "Fuites",
+    "poids": 0.8
+  },
+  {
+    "id": "niveau_huile_bas",
+    "nom": "Niveau d'huile bas",
+    "description": "Consommation excessive d'huile",
+    "categorie": "Huile",
+    "poids": 0.7
+  },
+  {
+    "id": "bruit_courroie",
+    "nom": "Bruit de courroie",
+    "description": "Couinement ou grincement de courroie",
+    "categorie": "Bruit",
+    "poids": 0.6
+  },
+  {
+    "id": "voyant_temperature",
+    "nom": "Voyant de température allumé",
+    "description": "Témoin de surchauffe moteur",
+    "categorie": "Voyants",
+    "poids": 1.0
+  },
+  {
+    "id": "fumee_capot",
+    "nom": "Fumée sous le capot",
+    "description": "Fumée visible sous le capot",
+    "categorie": "Surchauffe",
+    "poids": 1.0
+  },
+  {
+    "id": "bruit_demarreur",
+    "nom": "Bruit anormal du démarreur",
+    "description": "Grincement ou cliquetis au démarrage",
+    "categorie": "Démarrage",
+    "poids": 0.8
+  },
+  {
+    "id": "voyant_batterie",
+    "nom": "Voyant de batterie allumé",
+    "description": "Témoin de charge batterie",
+    "categorie": "Voyants",
+    "poids": 0.8
+  },
+  {
+    "id": "phares_faibles",
+    "nom": "Phares faibles",
+    "description": "Éclairage moins intense que la normale",
+    "categorie": "Électrique",
+    "poids": 0.5
+  },
+  {
+    "id": "demarrage_impossible",
+    "nom": "Démarrage impossible",
+    "description": "Le moteur ne démarre pas du tout",
+    "categorie": "Démarrage",
+    "poids": 1.0
+  },
+  {
+    "id": "bruit_echappement",
+    "nom": "Bruit fort à l'échappement",
+    "description": "Échappement bruyant",
+    "categorie": "Échappement",
+    "poids": 0.6
+  },
+  {
+    "id": "odeur_essence",
+    "nom": "Odeur d'essence",
+    "description": "Forte odeur de carburant",
+    "categorie": "Odeur",
+    "poids": 0.9
+  },
+  {
+    "id": "trous_acceleration",
+    "nom": "Trous à l'accélération",
+    "description": "Perte de puissance momentanée",
+    "categorie": "Performance",
+    "poids": 0.7
+  },
+  {
+    "id": "a_coups_moteur",
+    "nom": "À-coups du moteur",
+    "description": "Moteur qui broute",
+    "categorie": "Fonctionnement",
+    "poids": 0.7
+  },
+  {
+    "id": "surconsommation_huile",
+    "nom": "Surconsommation d'huile",
+    "description": "Besoin fréquent d'ajouter de l'huile",
+    "categorie": "Huile",
+    "poids": 0.8
+  },
+  {
+    "id": "liquide_refroidissement_bas",
+    "nom": "Niveau de liquide de refroidissement bas",
+    "description": "Perte de liquide de refroidissement",
+    "categorie": "Refroidissement",
+    "poids": 0.8
+  },
+  {
+    "id": "ventilateur_bruyant",
+    "nom": "Ventilateur bruyant",
+    "description": "Bruit excessif du ventilateur",
+    "categorie": "Refroidissement",
+    "poids": 0.5
+  },
+  {
+    "id": "difficulte_changement_vitesse",
+    "nom": "Difficulté à passer les vitesses",
+    "description": "Boîte de vitesses dure",
+    "categorie": "Transmission",
+    "poids": 0.7
+  },
+  {
+    "id": "embrayage_patine",
+    "nom": "Embrayage qui patine",
+    "description": "Perte de transmission de puissance",
+    "categorie": "Transmission",
+    "poids": 0.8
+  },
+  {
+    "id": "bruit_freinage",
+    "nom": "Bruit au freinage",
+    "description": "Grincement ou couinement des freins",
+    "categorie": "Freinage",
+    "poids": 0.7
+  },
+  {
+    "id": "pedale_frein_molle",
+    "nom": "Pédale de frein molle",
+    "description": "Pédale qui s'enfonce trop facilement",
+    "categorie": "Freinage",
+    "poids": 0.9
+  },
+  {
+    "id": "voyant_frein",
+    "nom": "Voyant de frein allumé",
+    "description": "Témoin de défaut freinage",
+    "categorie": "Voyants",
+    "poids": 0.9
+  },
+  {
+    "id": "direction_dure",
+    "nom": "Direction dure",
+    "description": "Difficulté à tourner le volant",
+    "categorie": "Direction",
+    "poids": 0.7
+  },
+  {
+    "id": "vibrations_volant",
+    "nom": "Vibrations dans le volant",
+    "description": "Volant qui vibre en roulant",
+    "categorie": "Direction",
+    "poids": 0.6
+  },
+  {
+    "id": "usure_pneus_irreguliere",
+    "nom": "Usure irrégulière des pneus",
+    "description": "Pneus usés de façon non uniforme",
+    "categorie": "Pneus",
+    "poids": 0.6
+  },
+  {
+    "id": "bruit_suspension",
+    "nom": "Bruit de suspension",
+    "description": "Claquement ou grincement des suspensions",
+    "categorie": "Suspension",
+    "poids": 0.6
+  },
+  {
+    "id": "vehicule_tire_cote",
+    "nom": "Véhicule qui tire d'un côté",
+    "description": "Direction qui dévie",
+    "categorie": "Direction",
+    "poids": 0.7
+  },
+  {
+    "id": "climatisation_inefficace",
+    "nom": "Climatisation inefficace",
+    "description": "Air conditionné qui ne refroidit pas",
+    "categorie": "Confort",
+    "poids": 0.4
+  },
+  {
+    "id": "chauffage_inefficace",
+    "nom": "Chauffage inefficace",
+    "description": "Pas de chaleur dans l'habitacle",
+    "categorie": "Confort",
+    "poids": 0.4
+  },
+  {
+    "id": "buee_parebrise",
+    "nom": "Buée persistante sur le pare-brise",
+    "description": "Condensation excessive",
+    "categorie": "Confort",
+    "poids": 0.3
+  },
+  {
+    "id": "temoin_airbag",
+    "nom": "Témoin airbag allumé",
+    "description": "Voyant de défaut airbag",
+    "categorie": "Sécurité",
+    "poids": 0.8
+  },
+  {
+    "id": "temoin_abs",
+    "nom": "Témoin ABS allumé",
+    "description": "Voyant de défaut ABS",
+    "categorie": "Sécurité",
+    "poids": 0.8
+  }
+]

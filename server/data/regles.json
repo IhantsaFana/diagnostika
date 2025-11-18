@@ -1,0 +1,178 @@
+[
+  {
+    "id": "diag_injection",
+    "nom": "Problème d'injection",
+    "description": "Dysfonctionnement du système d'injection de carburant",
+    "gravite": "Moyen",
+    "cout_min": 30000,
+    "cout_max": 80000,
+    "symptomes_requis": ["fumee_noire", "consommation_elevee"],
+    "symptomes_optionnels": ["perte_puissance", "ralenti_irregulier"],
+    "conseils": "Faire vérifier les injecteurs et le système d'injection"
+  },
+  {
+    "id": "diag_radiateur",
+    "nom": "Radiateur défectueux",
+    "description": "Problème de refroidissement du moteur",
+    "gravite": "Critique",
+    "cout_min": 25000,
+    "cout_max": 60000,
+    "symptomes_requis": ["moteur_chauffe", "fuite_liquide"],
+    "symptomes_optionnels": ["voyant_temperature", "fumee_capot"],
+    "conseils": "Arrêter le véhicule immédiatement et faire remorquer"
+  },
+  {
+    "id": "diag_batterie",
+    "nom": "Panne de batterie",
+    "description": "Batterie déchargée ou défectueuse",
+    "gravite": "Léger",
+    "cout_min": 12000,
+    "cout_max": 25000,
+    "symptomes_requis": ["demarrage_difficile", "batterie_faible"],
+    "symptomes_optionnels": ["phares_faibles", "voyant_batterie"],
+    "conseils": "Vérifier la charge et l'état de la batterie"
+  },
+  {
+    "id": "diag_demarreur",
+    "nom": "Problème de démarreur",
+    "description": "Démarreur défaillant",
+    "gravite": "Moyen",
+    "cout_min": 15000,
+    "cout_max": 35000,
+    "symptomes_requis": ["demarrage_difficile", "bruit_claquement"],
+    "symptomes_optionnels": ["bruit_demarreur"],
+    "conseils": "Remplacement du démarreur nécessaire"
+  },
+  {
+    "id": "diag_joint_culasse",
+    "nom": "Joint de culasse défectueux",
+    "description": "Fuite au niveau du joint de culasse",
+    "gravite": "Critique",
+    "cout_min": 80000,
+    "cout_max": 200000,
+    "symptomes_requis": ["fumee_blanche", "moteur_chauffe"],
+    "symptomes_optionnels": ["surconsommation_huile", "liquide_refroidissement_bas"],
+    "conseils": "Réparation urgente nécessaire"
+  },
+  {
+    "id": "diag_segments",
+    "nom": "Segments de piston usés",
+    "description": "Usure des segments de piston",
+    "gravite": "Critique",
+    "cout_min": 100000,
+    "cout_max": 300000,
+    "symptomes_requis": ["fumee_bleue", "surconsommation_huile"],
+    "symptomes_optionnels": ["perte_puissance"],
+    "conseils": "Révision moteur nécessaire"
+  },
+  {
+    "id": "diag_alternateur",
+    "nom": "Alternateur défaillant",
+    "description": "Problème de charge de la batterie",
+    "gravite": "Moyen",
+    "cout_min": 20000,
+    "cout_max": 50000,
+    "symptomes_requis": ["voyant_batterie", "batterie_faible"],
+    "symptomes_optionnels": ["phares_faibles"],
+    "conseils": "Remplacement de l'alternateur"
+  },
+  {
+    "id": "diag_bougies",
+    "nom": "Bougies d'allumage défectueuses",
+    "description": "Bougies usées ou encrassées",
+    "gravite": "Léger",
+    "cout_min": 5000,
+    "cout_max": 15000,
+    "symptomes_requis": ["demarrage_difficile", "ralenti_irregulier"],
+    "symptomes_optionnels": ["consommation_elevee", "a_coups_moteur"],
+    "conseils": "Remplacement des bougies d'allumage"
+  },
+  {
+    "id": "diag_filtre_air",
+    "nom": "Filtre à air encrassé",
+    "description": "Filtre à air obstrué",
+    "gravite": "Léger",
+    "cout_min": 2000,
+    "cout_max": 8000,
+    "symptomes_requis": ["perte_puissance", "consommation_elevee"],
+    "symptomes_optionnels": ["fumee_noire"],
+    "conseils": "Remplacement du filtre à air"
+  },
+  {
+    "id": "diag_pompe_carburant",
+    "nom": "Pompe à carburant défaillante",
+    "description": "Problème d'alimentation en carburant",
+    "gravite": "Moyen",
+    "cout_min": 25000,
+    "cout_max": 60000,
+    "symptomes_requis": ["calage_moteur", "demarrage_difficile"],
+    "symptomes_optionnels": ["perte_puissance", "trous_acceleration"],
+    "conseils": "Remplacement de la pompe à carburant"
+  },
+  {
+    "id": "diag_courroie_distribution",
+    "nom": "Courroie de distribution usée",
+    "description": "Courroie de distribution à remplacer",
+    "gravite": "Critique",
+    "cout_min": 40000,
+    "cout_max": 120000,
+    "symptomes_requis": ["bruit_courroie", "vibrations_moteur"],
+    "symptomes_optionnels": ["ralenti_irregulier"],
+    "conseils": "Remplacement urgent de la courroie"
+  },
+  {
+    "id": "diag_echappement",
+    "nom": "Système d'échappement défectueux",
+    "description": "Fuite ou obstruction de l'échappement",
+    "gravite": "Moyen",
+    "cout_min": 15000,
+    "cout_max": 80000,
+    "symptomes_requis": ["bruit_echappement", "perte_puissance"],
+    "symptomes_optionnels": ["odeur_brulee"],
+    "conseils": "Inspection et réparation de l'échappement"
+  },
+  {
+    "id": "diag_turbo",
+    "nom": "Turbocompresseur défaillant",
+    "description": "Problème de turbo",
+    "gravite": "Critique",
+    "cout_min": 80000,
+    "cout_max": 250000,
+    "symptomes_requis": ["perte_puissance", "bruit_sifflement"],
+    "symptomes_optionnels": ["fumee_noire", "consommation_elevee"],
+    "conseils": "Diagnostic et réparation du turbo"
+  },
+  {
+    "id": "diag_embrayage",
+    "nom": "Embrayage usé",
+    "description": "Disque d'embrayage à remplacer",
+    "gravite": "Moyen",
+    "cout_min": 30000,
+    "cout_max": 80000,
+    "symptomes_requis": ["embrayage_patine", "difficulte_changement_vitesse"],
+    "symptomes_optionnels": ["odeur_brulee"],
+    "conseils": "Remplacement du kit d'embrayage"
+  },
+  {
+    "id": "diag_freins",
+    "nom": "Plaquettes de frein usées",
+    "description": "Usure des plaquettes de frein",
+    "gravite": "Moyen",
+    "cout_min": 10000,
+    "cout_max": 30000,
+    "symptomes_requis": ["bruit_freinage"],
+    "symptomes_optionnels": ["voyant_frein"],
+    "conseils": "Remplacement des plaquettes de frein"
+  },
+  {
+    "id": "diag_maitre_cylindre",
+    "nom": "Maître-cylindre défectueux",
+    "description": "Problème de circuit de freinage",
+    "gravite": "Critique",
+    "cout_min": 20000,
+    "cout_max": 50000,
+    "symptomes_requis": ["pedale_frein_molle", "voyant_frein"],
+    "symptomes_optionnels": ["fuite_liquide"],
+    "conseils": "Réparation urgente du système de freinage"
+  }
+]
