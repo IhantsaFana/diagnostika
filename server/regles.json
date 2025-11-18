@@ -1,0 +1,20 @@
+[
+  {
+    "symptomes_requis": ["fumée noire", "consommation élevée"],
+    "diagnostic": "Problème d'injection",
+    "gravite": "Moyen",
+    "cout_estimatif": "300Ar - 800Ar"
+  },
+  {
+    "symptomes_requis": ["moteur chauffe", "fuite liquide"],
+    "diagnostic": "Radiateur défectueux",
+    "gravite": "Critique",
+    "cout_estimatif": "250Ar - 600Ar"
+  },
+  {
+    "symptomes_requis": ["démarrage difficile", "batterie faible"],
+    "diagnostic": "Panne batterie",
+    "gravite": "Léger",
+    "cout_estimatif": "120Ar - 250Ar"
+  }
+]
