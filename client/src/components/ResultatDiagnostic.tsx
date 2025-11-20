@@ -130,13 +130,11 @@ export default function ResultatDiagnosticComponent({ resultat }: ResultatDiagno
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">
               <h3 className="text-xl font-bold text-slate-900">
-                {resultat.explication_ia ? 'Explication IA' : 'Explication'}
+                Explication IA
               </h3>
-              {resultat.explication_ia && (
-                <IoSparkles className="text-blue-500 animate-pulse" size={20} />
-              )}
+              <IoSparkles className="text-blue-500 animate-pulse" size={20} />
             </div>
-            <p className="text-slate-700 leading-relaxed text-lg">
+            <p className="text-slate-700 leading-relaxed text-lg text-justify">
               {explication}
             </p>
           </div>

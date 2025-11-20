@@ -109,8 +109,8 @@ def diagnostiquer():
         if not resultat.get('succes'):
             return jsonify(resultat), 400
         
-        # Reformulation IA optionnelle
-        if assistant_ia.actif and resultat.get('confiance') in ['Haute', 'Moyenne']:
+        # Reformulation IA - toujours activer pour plus de clarté
+        if assistant_ia.actif:
             explication_ia = assistant_ia.reformuler_diagnostic(resultat)
             resultat['explication_ia'] = explication_ia
         

@@ -104,7 +104,7 @@ class MoteurDiagnostic:
             score = self.vectorisation.calculer_score_regle(
                 symptomes_valides,
                 diagnostic.symptomes_requis,
-                diagnostic.symptomes_optionnels,
+                diagnostic.symptomes_optionnels or [],
                 poids_symptomes
             )
             
