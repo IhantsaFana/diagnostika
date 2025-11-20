@@ -10,9 +10,10 @@ class AssistantIA:
         self.actif = config.USE_AI_EXPLANATION
         if self.actif:
             try:
-                import google.generativeai as genai
-                genai.configure(api_key=config.GEMINI_API_KEY)
-                self.model = genai.GenerativeModel('gemini-2.5-flash')
+                from google.generativeai.client import configure
+                from google.generativeai.generative_models import GenerativeModel
+                configure(api_key=config.GEMINI_API_KEY)
+                self.model = GenerativeModel('gemini-2.0-flash')
                 print("[IA] Service Gemini activé")
             except Exception as e:
                 print(f"[IA] Erreur initialisation Gemini: {e}")

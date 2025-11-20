@@ -61,6 +61,9 @@ def rechercher_symptomes():
                 'succes': False,
                 'erreur': erreur
             }), 400
+
+        # Sécuriser le typage pour l'analyse statique
+        assert isinstance(texte, str)
         
         # Recherche
         resultats = moteur.rechercher_symptomes(texte, top_k=5)
@@ -94,6 +97,9 @@ def diagnostiquer():
                 'succes': False,
                 'erreur': erreur
             }), 400
+
+        # Sécuriser le typage pour l'analyse statique
+        assert isinstance(symptomes_ids, list)
         
         print(f"[API] Diagnostic demandé pour: {symptomes_ids}")
         

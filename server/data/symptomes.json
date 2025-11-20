@@ -348,5 +348,110 @@
     "description": "Voyant de défaut ABS",
     "categorie": "Sécurité",
     "poids": 0.8
+  },
+  {
+    "id": "carter_huile_fuite",
+    "nom": "Fuite au carter d'huile",
+    "description": "Fuite importante au niveau du carter",
+    "categorie": "Fuites",
+    "poids": 0.8
+  },
+  {
+    "id": "liquide_transmission_fuite",
+    "nom": "Fuite de liquide de transmission",
+    "description": "Fuite au niveau de la boîte de vitesses",
+    "categorie": "Transmission",
+    "poids": 0.7
+  },
+  {
+    "id": "liquide_frein_fuite",
+    "nom": "Fuite de liquide de freinage",
+    "description": "Fuite au niveau du circuit de freinage",
+    "categorie": "Freinage",
+    "poids": 0.9
+  },
+  {
+    "id": "voyant_esp",
+    "nom": "Voyant ESP allumé",
+    "description": "Témoin de défaut contrôle de stabilité",
+    "categorie": "Sécurité",
+    "poids": 0.7
+  },
+  {
+    "id": "voyant_transmission",
+    "nom": "Voyant de transmission allumé",
+    "description": "Défaut détecté à la boîte de vitesses",
+    "categorie": "Voyants",
+    "poids": 0.8
+  },
+  {
+    "id": "vibrations_freinage",
+    "nom": "Vibrations au freinage",
+    "description": "Oscillations lors du freinage",
+    "categorie": "Freinage",
+    "poids": 0.7
+  },
+  {
+    "id": "bruit_moteur_metalique",
+    "nom": "Bruit métallique du moteur",
+    "description": "Cognement du moteur",
+    "categorie": "Bruit",
+    "poids": 0.8
+  },
+  {
+    "id": "perte_liquide_refroidissement",
+    "nom": "Perte progressive de liquide de refroidissement",
+    "description": "Besoin fréquent de remplir le réservoir",
+    "categorie": "Refroidissement",
+    "poids": 0.8
+  },
+  {
+    "id": "bougies_encrassees",
+    "nom": "Bougies encrassées",
+    "description": "Accumulation de dépôt sur les bougies",
+    "categorie": "Allumage",
+    "poids": 0.7
+  },
+  {
+    "id": "filtre_carburant_bouche",
+    "nom": "Filtre à carburant encrassé",
+    "description": "Filtre à carburant obstrué",
+    "categorie": "Carburant",
+    "poids": 0.6
+  },
+  {
+    "id": "injecteurs_encrassees",
+    "nom": "Injecteurs encrassés",
+    "description": "Accumulation de résidus dans les injecteurs",
+    "categorie": "Carburant",
+    "poids": 0.7
+  },
+  {
+    "id": "capteur_oxygene_defaillant",
+    "nom": "Capteur d'oxygène défaillant",
+    "description": "Problème de sonde lambda",
+    "categorie": "Capteurs",
+    "poids": 0.7
+  },
+  {
+    "id": "serpentin_bouche",
+    "nom": "Serpentin encrassé",
+    "description": "Obstruction du serpentin du climatiseur",
+    "categorie": "Confort",
+    "poids": 0.5
+  },
+  {
+    "id": "compresseur_climatiseur",
+    "nom": "Compresseur de climatiseur défaillant",
+    "description": "Problème du compresseur AC",
+    "categorie": "Confort",
+    "poids": 0.6
+  },
+  {
+    "id": "thermostat_defaillant",
+    "nom": "Thermostat défaillant",
+    "description": "Régulation de température défectueuse",
+    "categorie": "Refroidissement",
+    "poids": 0.6
   }
 ]

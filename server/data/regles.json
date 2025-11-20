@@ -174,5 +174,137 @@
     "symptomes_requis": ["pedale_frein_molle", "voyant_frein"],
     "symptomes_optionnels": ["fuite_liquide"],
     "conseils": "Réparation urgente du système de freinage"
+  },
+  {
+    "id": "diag_disques_freins",
+    "nom": "Disques de frein usés",
+    "description": "Usure excessive des disques de freinage",
+    "gravite": "Moyen",
+    "cout_min": 15000,
+    "cout_max": 40000,
+    "symptomes_requis": ["vibrations_freinage", "bruit_freinage"],
+    "symptomes_optionnels": ["voyant_frein"],
+    "conseils": "Remplacement des disques de freins"
+  },
+  {
+    "id": "diag_amortisseurs",
+    "nom": "Amortisseurs défectueux",
+    "description": "Usure des amortisseurs",
+    "gravite": "Moyen",
+    "cout_min": 20000,
+    "cout_max": 50000,
+    "symptomes_requis": ["bruit_suspension", "vibrations_volant"],
+    "symptomes_optionnels": ["vehicule_tire_cote"],
+    "conseils": "Remplacement des amortisseurs"
+  },
+  {
+    "id": "diag_direction_hydraulique",
+    "nom": "Problème de direction hydraulique",
+    "description": "Défaut du système de direction",
+    "gravite": "Moyen",
+    "cout_min": 25000,
+    "cout_max": 60000,
+    "symptomes_requis": ["direction_dure", "vehicule_tire_cote"],
+    "symptomes_optionnels": ["vibrations_volant"],
+    "conseils": "Diagnostic et réparation de la direction"
+  },
+  {
+    "id": "diag_capteur_oxygene",
+    "nom": "Capteur d'oxygène défaillant",
+    "description": "Sonde lambda à remplacer",
+    "gravite": "Moyen",
+    "cout_min": 12000,
+    "cout_max": 30000,
+    "symptomes_requis": ["capteur_oxygene_defaillant", "voyant_moteur"],
+    "symptomes_optionnels": ["consommation_elevee", "ralenti_irregulier"],
+    "conseils": "Remplacement de la sonde lambda"
+  },
+  {
+    "id": "diag_thermostat",
+    "nom": "Thermostat défaillant",
+    "description": "Régulation de température moteur défectueuse",
+    "gravite": "Léger",
+    "cout_min": 8000,
+    "cout_max": 20000,
+    "symptomes_requis": ["thermostat_defaillant", "moteur_chauffe"],
+    "symptomes_optionnels": ["ventilateur_bruyant"],
+    "conseils": "Remplacement du thermostat"
+  },
+  {
+    "id": "diag_climatiseur",
+    "nom": "Climatiseur défaillant",
+    "description": "Problème du système de climatisation",
+    "gravite": "Léger",
+    "cout_min": 15000,
+    "cout_max": 50000,
+    "symptomes_requis": ["climatisation_inefficace"],
+    "symptomes_optionnels": ["serpentin_bouche", "compresseur_climatiseur"],
+    "conseils": "Diagnostic et maintenance du climatiseur"
+  },
+  {
+    "id": "diag_compresseur_ac",
+    "nom": "Compresseur AC défaillant",
+    "description": "Problème du compresseur de climatisation",
+    "gravite": "Moyen",
+    "cout_min": 30000,
+    "cout_max": 80000,
+    "symptomes_requis": ["compresseur_climatiseur", "climatisation_inefficace"],
+    "symptomes_optionnels": ["odeur_brulee"],
+    "conseils": "Remplacement du compresseur AC"
+  },
+  {
+    "id": "diag_fuite_carter",
+    "nom": "Fuite au carter d'huile",
+    "description": "Fuite importante au niveau du carter",
+    "gravite": "Moyen",
+    "cout_min": 10000,
+    "cout_max": 25000,
+    "symptomes_requis": ["carter_huile_fuite", "fuite_huile"],
+    "symptomes_optionnels": ["niveau_huile_bas"],
+    "conseils": "Remplacement du joint du carter"
+  },
+  {
+    "id": "diag_fuite_transmission",
+    "nom": "Fuite de liquide de transmission",
+    "description": "Fuite au niveau de la boîte de vitesses",
+    "gravite": "Moyen",
+    "cout_min": 20000,
+    "cout_max": 50000,
+    "symptomes_requis": ["liquide_transmission_fuite", "difficulte_changement_vitesse"],
+    "symptomes_optionnels": ["bruit_anormal"],
+    "conseils": "Contrôle et réparation de la transmission"
+  },
+  {
+    "id": "diag_fuite_freinage",
+    "nom": "Fuite de liquide de freinage",
+    "description": "Fuite au niveau du circuit de freinage",
+    "gravite": "Critique",
+    "cout_min": 15000,
+    "cout_max": 40000,
+    "symptomes_requis": ["liquide_frein_fuite", "pedale_frein_molle"],
+    "symptomes_optionnels": ["voyant_frein"],
+    "conseils": "Réparation urgente du circuit de freinage"
+  },
+  {
+    "id": "diag_filtre_carburant",
+    "nom": "Filtre à carburant encrassé",
+    "description": "Filtre à carburant obstrué",
+    "gravite": "Léger",
+    "cout_min": 5000,
+    "cout_max": 12000,
+    "symptomes_requis": ["filtre_carburant_bouche"],
+    "symptomes_optionnels": ["demarrage_difficile", "perte_puissance"],
+    "conseils": "Remplacement du filtre à carburant"
+  },
+  {
+    "id": "diag_injecteurs",
+    "nom": "Injecteurs encrassés",
+    "description": "Accumulation de résidus dans les injecteurs",
+    "gravite": "Moyen",
+    "cout_min": 20000,
+    "cout_max": 50000,
+    "symptomes_requis": ["injecteurs_encrassees", "ralenti_irregulier"],
+    "symptomes_optionnels": ["consommation_elevee", "a_coups_moteur"],
+    "conseils": "Nettoyage ou remplacement des injecteurs"
   }
 ]

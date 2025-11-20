@@ -12,7 +12,7 @@ class Diagnostic:
     cout_min: int
     cout_max: int
     symptomes_requis: List[str]  # IDs des symptômes
-    symptomes_optionnels: List[str] = None
+    symptomes_optionnels: Optional[List[str]] = None
     conseils: Optional[str] = None
     
     def __post_init__(self):
